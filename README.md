@@ -1,54 +1,36 @@
-# Company Rule‑Based Chatbot (Python + Flask)
+# 🤖 Rule-Based Chatbot  
 
-A simple, deterministic rule‑based chatbot you can run as a CLI or a small web app.
+A simple **rule-based chatbot** built using **Python** and **JSON**.  
+This project was developed as a college project to demonstrate how chatbots can respond to predefined user inputs.  
 
-## Quick Start (Windows/macOS/Linux)
+---
 
-1) (Optional) Create a virtual environment
-```bash
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
-```
+## 📂 Project Structure  
 
-2) Install dependencies
-```bash
-pip install -r requirements.txt
-```
 
-3) Run in the terminal (CLI)
-```bash
-python run_cli.py
-```
+---
 
-4) Run the web app
-```bash
-python app.py
-# Open http://localhost:5000 in your browser
-```
+## ⚡ Features  
 
-## Customize for **your** company
+- ✨ Rule-based responses using JSON  
+- ✨ Greets user with friendly messages  
+- ✨ Handles **Yes/No** answers with multiple variations (yep, yeah, nah, nope, etc.)  
+- ✨ Runs directly in terminal / command prompt  
+- ✨ Lightweight and easy to customize  
 
-- Edit **rules.json** → change the `"company"` block (name, hours, contact).
-- Add new intents in `"intents"`: include one or more `"patterns"` (plain words or regex) and one or more `"responses"`.
-- The engine picks the best‑matching intent by counting regex hits (case‑insensitive).
-- Special handler: `order_status` extracts an order ID (6–10 digits) from the user message.
-- Fallback responses are used if nothing matches.
+---
 
-## File Layout
+## 🛠️ Requirements  
 
-```
-.
-├─ app.py               # Flask web server
-├─ run_cli.py           # Terminal chatbot
-├─ engine.py            # Rule matcher + responders
-├─ rules.json           # Company + intents + fallbacks
-├─ requirements.txt
-├─ templates/
-│  └─ index.html        # Simple chat UI
-└─ static/
-   ├─ style.css
-   └─ app.js
-```
+- Python **3.8+** (tested on Python 3.13 as well ✅)  
+
+---
+
+👤 You: hi  
+🤖 Bot: Hello! How can I assist you today?  
+
+👤 You: yes  
+🤖 Bot: Great! Let's continue.  
+
+👤 You: no  
+🤖 Bot: Alright, no worries.  
