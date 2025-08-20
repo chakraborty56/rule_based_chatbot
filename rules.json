@@ -1,0 +1,121 @@
+{
+  "company": {
+    "name": "NovaMobiles",
+    "hours": "Mon–Sat 10am–7pm IST",
+    "phone": "+91-98765-43210",
+    "email": "support@novamobiles.example",
+    "pickup": "Durgapur City Centre (Ground Floor)"
+  },
+  "intents": [
+    {
+      "name": "greet",
+      "patterns": [
+        "\\bhi\\b",
+        "\\bhello\\b",
+        "\\bhey\\b",
+        "\\bgood\\s*(morning|afternoon|evening)\\b"
+      ],
+      "responses": [
+        "Hello! I'm {name}'s assistant. How can I help today?",
+        "Hi there! I'm the {name} support bot—ask me about orders, warranty, hours, or store location."
+      ]
+    },
+    {
+      "name": "hours",
+      "patterns": [
+        "hours?",
+        "open",
+        "closing",
+        "time",
+        "working\\s*hours"
+      ],
+      "responses": [
+        "Our store hours are {hours}.",
+        "{name} support is available {hours}."
+      ]
+    },
+    
+    {
+      "name": "warranty",
+      "patterns": [
+        "warr?anty",
+        "guarantee",
+        "replacement"
+      ],
+      "responses": [
+        "{name} devices include a 1-year limited warranty for manufacturing defects. Want the claim steps?",
+        "We provide a 1-year warranty. Keep your invoice handy for claims."
+      ]
+    },
+    {
+      "name": "order_status",
+      "patterns": [
+        "\\border\\b",
+        "\\bord\\b",
+        "status",
+        "track",
+        "tracking"
+      ],
+      "responses": [
+        "Can you share your order ID? I'll help track it.",
+        "Tracking order… please provide your order number."
+      ]
+    },
+    {
+      "name": "location",
+      "patterns": [
+        "location",
+        "address",
+        "where",
+        "store"
+      ],
+      "responses": [
+        "We’re online-first with pickup at {pickup}. Need directions?",
+        "Pickups happen at {pickup}. Home delivery is available too."
+      ]
+    },
+    {
+      "name": "contact",
+      "patterns": [
+        "contact",
+        "phone",
+        "email",
+        "call",
+        "reach"
+      ],
+      "responses": [
+        "You can reach a human at {phone} or {email}.",
+        "Want to talk to a person? Call {phone} or email {email}."
+      ]
+    },
+    {
+      "name": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see\\s*you",
+        "take\\s*care"
+      ],
+      "responses": [
+        "Bye! If you need anything else, just ask.",
+        "See you! Happy to help anytime."
+      ]
+    },
+    {
+      "name": "thanks",
+      "patterns": [
+        "thanks",
+        "thank\\s*you",
+        "thx"
+      ],
+      "responses": [
+        "Happy to help!",
+        "You're welcome!"
+      ]
+    }
+  ],
+  "fallbacks": [
+    "Sorry, I didn’t quite get that. Could you rephrase?",
+    "I'm not sure yet. Try asking about orders, warranty, hours, pickup location, or how to contact support."
+  ]
+}

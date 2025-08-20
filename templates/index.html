@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaMobiles – RuleBot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>NovaMobiles – Support Chatbot</h1>
+      <p class="sub">Ask about orders, warranty, hours, pickup location, or how to contact support.</p>
+    </header>
+
+    <main id="chat">
+      <!-- Messages will appear here -->
+    </main>
+
+    <form id="chat-form" autocomplete="off">
+      <input id="msg" placeholder="Type your message… (e.g., Track order 123456)" autofocus />
+      <button type="submit">Send</button>
+    </form>
+    <footer>
+      <small>Rule‑based demo. Replace company details & intents in <code>rules.json</code>.</small>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
